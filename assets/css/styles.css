@@ -6,6 +6,12 @@ nav + main > .container {
   padding-top: 65px;
 }
 
+.footer {
+  position: sticky;
+  width: 100%;
+  bottom: 0;
+}
+
 .recipe-card {
   cursor: pointer;
 }

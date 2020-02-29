@@ -9,6 +9,17 @@
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="assets/js/bootstrap.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $('#login').submit(function(e){
+          if ($('#username').val() == 'admin')
+            window.location.replace('index.html'); // TODO: add admin version of all relevant pages
+          else
+            window.location.replace('index.html');
+          e.preventDefault();
+        });
+      });
+    </script>
     <title>Login</title>
   </head>
   <body>
@@ -20,7 +31,7 @@
               <p class="text-center mt-4"><i id="login-logo" class="fa fa-cutlery"></i></p>
               <hr class="ml-auto mr-auto mt-4">
               <h1>Log In</h1>
-              <form action="index-reg.html">
+              <form id="login">
                 <div class="form-group">
                   <label for="username">Username</label>
                   <input id="username" class="form-control" name="username" type="text">

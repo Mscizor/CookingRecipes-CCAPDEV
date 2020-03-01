@@ -7,13 +7,26 @@ nav + main > .container {
 }
 
 .footer {
-  position: sticky;
   width: 100%;
   bottom: 0;
 }
 
 .recipe-card {
   cursor: pointer;
+}
+
+.recipe-card a {
+  display: none;
+}
+
+#profile-img {
+  width: 32px;
+  height: 32px;
+}
+
+#recipe-interactions {
+  position: absolute;
+  bottom: 0;
 }
 
 #login-interface {

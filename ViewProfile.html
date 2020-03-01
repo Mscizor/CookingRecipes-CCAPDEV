@@ -9,7 +9,7 @@
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="assets/js/bootstrap.min.js"></script>
-    <title>Create Recipe</title>
+    <title>View Profile</title>
   </head>
 
   <body class="bg-cstm-yellow-lightest">
@@ -45,138 +45,109 @@
 
     <main role="main">
       <div class="container">
-        <div>
-          <h2>View Profile</h2>
-          <div class="row " >
-            <div class="col-7.5 align-center bg-cstm-green-lightest"style="height:400px ">
-              <div class="continer ">
-                <h3  id="input-recipe-name">Lorem</h3>
+        <div class="row">
+          <div class="col-7 p-4 rounded bg-cstm-green-lightest"style="height:400px">
+            <h2 id="profile-name">Mary Sue</h2>
+            <h4 class="h-75 lead" id="profile-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In neque libero, ullamcorper sit amet iaculis non, vehicula ac nibh. In sit amet lacinia purus. Praesent pharetra nisi et eros mollis consequat. Cras ut tincidunt turpis. Nulla facilisi. Vivamus id pellentesque ligula. Ut tellus neque, egestas id neque in, varius tincidunt enim. Nunc vitae purus quis diam varius tincidunt. Morbi vitae pellentesque urna. Suspendisse fringilla magna sit amet diam dignissim rhoncus. Curabitur venenatis magna magna, nec pharetra massa sollicitudin eu. Ut augue felis, dignissim sed sollicitudin non, interdum quis sapien. Etiam aliquet vulputate porttitor. Praesent a enim blandit, elementum est vel, eleifend orci.</h4>
+            <small id="join-date" class="align-self-end">Joined on February 24, 2020</small>
+          </div>
+          <div class="col-5">
+            <img id="profile-image" class="rounded img-fluid" src="assets/images/Faces/alexandru-zdrobau--djRG1vB1pw-unsplash.jpg">
+            <!--Photo by Alexandru Zdrobău on Unsplash-->
+          </div>
+        </div>
+        <div class="row">
+          <div class="recipe-cards">
+            <h2>Their Recipes</h2>
+            <div class="row mt-4">
+              <div class="card-deck">
+                <div class="recipe-card card text-center">
+                  <img class="card-img-top" src="assets/images/anthony-rosset-5vDeo9GVpdw-unsplash.jpg" alt="Ice Cream Bread (Photo by Anthony Rosset on Unsplash)">
+                  <div class="card-body bg-cstm-green-lighter">
+                    <h6 class="card-title">Ice Cream Bread</h6>
+                  </div>
+                </div>
+                <div class="recipe-card card text-center">
+                  <img class="card-img-top" src="assets/images/raphael-maksian-vPedCtyqArw-unsplash.jpg" alt="Blueberry Cheesecake (Photo by RAPHAEL MAKSIAN on Unsplash)">
+                  <div class="card-body bg-cstm-green-lighter">
+                    <h6 class="card-title">Blueberry Cheesecake</h6>
+                  </div>
+                </div>
+                <div class="recipe-card card text-center">
+                  <img class="card-img-top" src="assets/images/olga-kudriavtseva-TG48AyjXsXk-unsplash.jpg" alt="Strawberry Cake (Photo by Olga Kudriavtseva on Unsplash)">
+                  <div class="card-body bg-cstm-green-lighter">
+                    <h6 class="card-title">Strawberry Cake</h6>
+                  </div>
+                </div>
+                <div class="recipe-card card text-center">
+                  <img class="card-img-top" src="assets/images/nick-fewings-8YhMxwhuyQM-unsplash.jpg" alt="Grilled Squid (Photo by Nick Fewings on Unsplash)">
+                  <div class="card-body bg-cstm-green-lighter">
+                    <h6 class="card-title">Grilled Squid</h6>
+                  </div>
+                </div>
               </div>
-              <div class="container" style="height:325px">
-                <h4 class="lead" id="input-recipe-name">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et, architecto?</h4>
-              </div>
-              
-              <div class="continer">
-                <h4  class="small"id="input-recipe-name">Joined 23 February 2020</h4>
-              </div>
-            </div>
-            <div class="col">
-              <div class="form-group text-right p-0">
-                <img src="assets/images/Faces/alexandru-zdrobau--djRG1vB1pw-unsplash.jpg" class="align-center padding-no" style="width:400px; height:400px" >
-                <!--Photo by Alexandru Zdrobău on Unsplash-->
-              </div>
-              
             </div>
           </div>
-          <div class="row ">
-                <div class="recipe-cards">
-                    <h2>Recipes</h2>
-                    <div class="row mt-4">
-                    <div class="card-deck">
-                        <div class="recipe-card card text-center">
-                        <img class="card-img-top" src="assets/images/anthony-rosset-5vDeo9GVpdw-unsplash.jpg" alt="Ice Cream Bread (Photo by Anthony Rosset on Unsplash)">
-                        <div class="card-body bg-cstm-green-lighter">
-                            <h6 class="card-title">Ice Cream Bread</h6>
-                        </div>
-                        </div>
-                        <div class="recipe-card card text-center">
-                        <img class="card-img-top" src="assets/images/raphael-maksian-vPedCtyqArw-unsplash.jpg" alt="Blueberry Cheesecake (Photo by RAPHAEL MAKSIAN on Unsplash)">
-                        <div class="card-body bg-cstm-green-lighter">
-                            <h6 class="card-title">Blueberry Cheesecake</h6>
-                        </div>
-                        </div>
-                        <div class="recipe-card card text-center">
-                        <img class="card-img-top" src="assets/images/olga-kudriavtseva-TG48AyjXsXk-unsplash.jpg" alt="Strawberry Cake (Photo by Olga Kudriavtseva on Unsplash)">
-                        <div class="card-body bg-cstm-green-lighter">
-                            <h6 class="card-title">Strawberry Cake</h6>
-                        </div>
-                        </div>
-                        <div class="recipe-card card text-center">
-                        <img class="card-img-top" src="assets/images/nick-fewings-8YhMxwhuyQM-unsplash.jpg" alt="Grilled Squid (Photo by Nick Fewings on Unsplash)">
-                        <div class="card-body bg-cstm-green-lighter">
-                            <h6 class="card-title">Grilled Squid</h6>
-                        </div>
-                        </div>
-                    </div>
-                    </div>
-                </div>
-                <button type="button" class="btn btn-cstm-orange-darkest text-light ml-auto mr-auto mt-4 d-block">Show more</button>
-           </div>
-           <div class="row ">
-            <div class="recipe-cards">
-                <h2>Likes</h2>
-                <div class="row mt-4">
-                <div class="card-deck">
-                    <div class="recipe-card card text-center">
-                    <img class="card-img-top" src="assets/images/anthony-rosset-5vDeo9GVpdw-unsplash.jpg" alt="Ice Cream Bread (Photo by Anthony Rosset on Unsplash)">
-                    <div class="card-body bg-cstm-green-lighter">
-                        <h6 class="card-title">Ice Cream Bread</h6>
-                    </div>
-                    </div>
-                    <div class="recipe-card card text-center">
-                    <img class="card-img-top" src="assets/images/raphael-maksian-vPedCtyqArw-unsplash.jpg" alt="Blueberry Cheesecake (Photo by RAPHAEL MAKSIAN on Unsplash)">
-                    <div class="card-body bg-cstm-green-lighter">
-                        <h6 class="card-title">Blueberry Cheesecake</h6>
-                    </div>
-                    </div>
-                    <div class="recipe-card card text-center">
-                    <img class="card-img-top" src="assets/images/olga-kudriavtseva-TG48AyjXsXk-unsplash.jpg" alt="Strawberry Cake (Photo by Olga Kudriavtseva on Unsplash)">
-                    <div class="card-body bg-cstm-green-lighter">
-                        <h6 class="card-title">Strawberry Cake</h6>
-                    </div>
-                    </div>
-                    <div class="recipe-card card text-center">
-                    <img class="card-img-top" src="assets/images/nick-fewings-8YhMxwhuyQM-unsplash.jpg" alt="Grilled Squid (Photo by Nick Fewings on Unsplash)">
-                    <div class="card-body bg-cstm-green-lighter">
-                        <h6 class="card-title">Grilled Squid</h6>
-                    </div>
-                    </div>
-                </div>
-                </div>
-             </div>
-             <button type="button" class="btn btn-cstm-orange-darkest text-light ml-auto mr-auto mt-4 d-block">Show more</button>
-            </div>
-            <div class="row ">
-                <div class="recipe-cards">
-                    <h2>Comments</h2>
-                    <div class="row mt-4">
-                    <div class="card-deck">
-                        <div class="row p-1">
-                                <div class="col-3">
-                                    <div class="recipe-card card text-center">
-                                    <img class="card-img-top" src="assets/images/anthony-rosset-5vDeo9GVpdw-unsplash.jpg" alt="Ice Cream Bread (Photo by Anthony Rosset on Unsplash)">
-                                    <div class="card-body bg-cstm-green-lighter">
-                                        <h6 class="card-title">Ice Cream Bread</h6>
-                                    </div>
-                                    </div>
-                                </div>
-                                <div class="bg-cstm-orange-lighter col">
-                                    <div class="container" style="height:200px">
-                                        <h4 class="lead" id="input-recipe-name">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et, architecto?</h4>
-                                    </div>
-                                </div>
-                        </div>
-                        <div class="row p-1">
-                            <div class="col-3">
-                                <div class="recipe-card card text-center">
-                                <img class="card-img-top" src="assets/images/anthony-rosset-5vDeo9GVpdw-unsplash.jpg" alt="Ice Cream Bread (Photo by Anthony Rosset on Unsplash)">
-                                <div class="card-body bg-cstm-green-lighter">
-                                    <h6 class="card-title">Ice Cream Bread</h6>
-                                </div>
-                                </div>
-                            </div>
-                            <div class="bg-cstm-orange-lighter col">
-                                <div class="container" style="height:200px">
-                                    <h4 class="lead" id="input-recipe-name">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et, architecto?</h4>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    </div>
-                 </div>
-                 <button type="button" class="btn btn-cstm-orange-darkest text-light ml-auto mr-auto mt-4 d-block">Show more</button>
-                </div>
+          <button type="button" class="btn btn-cstm-orange-darkest text-light ml-auto mr-auto mt-4 d-block">Show more</button>
         </div>
+        <div class="row">
+          <h2>Likes</h2>
+          <div class="recipe-cards">
+            <div class="row mt-4">
+              <div class="card-deck">
+                <div class="recipe-card card text-center">
+                  <img class="card-img-top" src="assets/images/anthony-rosset-5vDeo9GVpdw-unsplash.jpg" alt="Ice Cream Bread (Photo by Anthony Rosset on Unsplash)">
+                  <div class="card-body bg-cstm-green-lighter">
+                    <h6 class="card-title">Ice Cream Bread</h6>
+                  </div>
+                </div>
+                <div class="recipe-card card text-center">
+                  <img class="card-img-top" src="assets/images/raphael-maksian-vPedCtyqArw-unsplash.jpg" alt="Blueberry Cheesecake (Photo by RAPHAEL MAKSIAN on Unsplash)">
+                  <div class="card-body bg-cstm-green-lighter">
+                    <h6 class="card-title">Blueberry Cheesecake</h6>
+                  </div>
+                </div>
+                <div class="recipe-card card text-center">
+                  <img class="card-img-top" src="assets/images/olga-kudriavtseva-TG48AyjXsXk-unsplash.jpg" alt="Strawberry Cake (Photo by Olga Kudriavtseva on Unsplash)">
+                  <div class="card-body bg-cstm-green-lighter">
+                    <h6 class="card-title">Strawberry Cake</h6>
+                  </div>
+                </div>
+                <div class="recipe-card card text-center">
+                  <img class="card-img-top" src="assets/images/nick-fewings-8YhMxwhuyQM-unsplash.jpg" alt="Grilled Squid (Photo by Nick Fewings on Unsplash)">
+                  <div class="card-body bg-cstm-green-lighter">
+                    <h6 class="card-title">Grilled Squid</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button type="button" class="btn btn-cstm-orange-darkest text-light ml-auto mr-auto mt-4 d-block">Show more</button>
+        </div>
+        <div class="row">
+          <div class="recipe-cards">
+            <h2>Comments</h2>
+            <div class="row mt-4">
+              <div class="card-deck">
+                <div class="row p-1">
+                  <div class="col-3">
+                    <div class="recipe-card card text-center">
+                      <img class="card-img-top" src="assets/images/anthony-rosset-5vDeo9GVpdw-unsplash.jpg" alt="Ice Cream Bread (Photo by Anthony Rosset on Unsplash)">
+                      <div class="card-body bg-cstm-green-lighter">
+                        <h6 class="card-title">Ice Cream Bread</h6>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col p-4 rounded bg-cstm-orange-lighter">
+                    <h4 class="lead" id="input-recipe-name">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et, architecto?</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button type="button" class="btn btn-cstm-orange-darkest text-light ml-auto mr-auto mt-4 d-block">Show more</button>
+        </div>
+      </div>
       <!-- TODO: add aria-describedby descriptors using small for accessibility -->
     </main>
 

@@ -9,7 +9,7 @@
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="assets/js/bootstrap.min.js"></script>
-    <title>Create Recipe</title>
+    <title>Edit Profile</title>
   </head>
 
   <body class="bg-cstm-yellow-lightest">
@@ -57,18 +57,16 @@
                 <label for="input-servings">Description</label>
                 <textarea cols="30" rows="10" class="form-control" id="input-servings"></textarea>
               </div>
-              
               <div class="form-group text-center">
                 <button type="submit" class="btn btn-cstm-green">Next Step</button>
               </div>
             </div>
             <div class="col">
-              <div class="form-group text-center">
-                <!--<img comment="Photo by Alexandru Zdrobău on Unsplash" src="assets/images/Faces/alexandru-zdrobau--djRG1vB1pw-unsplash.jpg" class="align-center padding-no" style="width:400px; height:400px" >-->
-                <input type="file" accept="image/*">
-                <input type="button" class="btn btn-cstm-green" value="Upload">
+              <div class="form-group">
+                <div>sp</div>
+                <input type="file" id="img-upload" class="custom-file-input">
+                <label class="custom-file-label" for="img-upload">Choose your profile picture</label>
               </div>
-              
             </div>
           </div>
         </form>

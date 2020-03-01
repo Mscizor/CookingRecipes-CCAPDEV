@@ -8,14 +8,38 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <title>Cooking recipe website</title>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="../assets/js/common.js"></script>
+    <script>
+      $(document).ready(function() {
+        var sessionID = getParameterByName('sid');
+        if (sessionID) {
+          var user = fromSession(sessionID);
+          $("#user-dp").attr("src", '../' + user.bio.display);
+          var anchors = $("a").toArray();
+          for (var key in anchors) {
+            var anchor = anchors[key];
+            var link = $(anchor).attr("href");
+            if ($(anchor).hasClass('logout')) continue;
+            if (link !== '#') {
+              $(anchor).attr("href", link + '?sid=' + sessionID);
+            }
+          }
+          $("#registered-nav").show();
+          $("#registered-like").show();
+        } else {
+          $("#unregistered-nav").show();
+          $("#unregistered-like").show();
+        }
+      });
+    </script>
+    <title>White Pasta</title>
   </head>
 
   <body class="bg-cstm-yellow-lightest">
     <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-cstm-yellow">
       <div class="container">
-        <a class="navbar-brand text-cstm-orange-darkest" href="#"><i class="fa fa-cutlery"></i>&nbsp;&nbsp;&nbsp;Cooker</a>
+        <a class="navbar-brand text-cstm-orange-darkest" href="../index.html"><i class="fa fa-cutlery"></i>&nbsp;&nbsp;&nbsp;Cooker</a>
         <ul class="navbar-nav ml-auto mr-auto">
           <li class="nav-item">
             <div class="justify-content-md-center">
@@ -32,14 +56,30 @@
             </div>
           </li>
         </ul>
-        <ul class="navbar-nav mr-0">
-          <li class="nav-item">
-            <a class="nav-link" href="../login.html">Log in</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../register.html">Register</a>
-          </li>
-        </ul>
+        <div id="unregistered-nav" style="display:none;">
+          <ul class="navbar-nav mr-0">
+            <li class="nav-item">
+              <a class="nav-link" href="login.html">Log in</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="register.html">Register</a>
+            </li>
+          </ul>
+        </div>
+        <div id="registered-nav" style="display:none;">
+          <ul class="navbar-nav mr-0">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle pb-1 pt-1" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <img id="user-dp" src="" width="30" height="30" class="d-inline-block align-top rounded-circle" alt="">
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item logout" href="index.html">Log out</a>
+                <a class="dropdown-item" href="editprofile.html">Edit profile</a>
+                <a class="dropdown-item" href="createrecipe.html">Create recipe</a>
+              </div>
+            </li>
+          </ul>
+        </div>
       </div>
     </nav>
 
@@ -60,7 +100,10 @@
             </div>
             <div id="recipe-interactions" class="my-3">
               <h5 class="float-left">0 likes</h5>
-              <h5 class="float-right">Register to like recipes!</h5>
+              <h5 class="float-right">
+                <span id="registered-like" style="display:none;"><a href="#" class="text-dark">Like this recipe!</a></span>
+                <span id="unregistered-like" style="display:none;">Register to like recipes!</span>
+              </h5>
             </div>
           </div>
           <div class="col col-sm-4 bg-cstm-orange">

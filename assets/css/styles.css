@@ -6,9 +6,8 @@ nav + main > .container {
   padding-top: 65px;
 }
 
-.footer {
-  width: 100%;
-  bottom: 0;
+a:hover, a:visited, a:link, a:active .no-hover {
+  text-decoration: none !important;
 }
 
 .recipe-card {
@@ -22,11 +21,6 @@ nav + main > .container {
 #profile-img {
   width: 32px;
   height: 32px;
-}
-
-#recipe-interactions {
-  position: absolute;
-  bottom: 0;
 }
 
 #login-interface {
